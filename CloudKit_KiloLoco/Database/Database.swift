@@ -62,6 +62,10 @@ class Database {
         
         let query = CKQuery(recordType: "Person", predicate: predicate)
         
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        query.sortDescriptors = [sortDescriptor]
+        
         let operation = CKQueryOperation(query: query)
         
         operation.recordFetchedBlock = { record in

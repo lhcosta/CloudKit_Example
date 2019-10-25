@@ -34,27 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("Entrou")
-        completionHandler(.newData)
-//        guard let info = userInfo as? [String : AnyObject] else {return}
-//        
-//        guard let notification = CKQueryNotification(fromRemoteNotificationDictionary: info) else {return}
-//        
-//        guard let recordID = notification.recordID else {return}
-//        
-//        if notification.notificationType == .query {
-//            NotificationCenter.default.post(name: Notification.Name("cloudKit.newRecord"), object: nil, userInfo: ["recordID" : recordID])
-//        }
-//        
-//        completionHandler(.newData)
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("Entrou")
-        completionHandler()
-    }
-
 
     // MARK: UISceneSession Lifecycle
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
